@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
@@ -16,9 +15,4 @@ func routes() http.Handler {
 	router.Get("/", home)
 
 	return router
-}
-
-// home handles GET / requests.
-func home(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello go")
 }
